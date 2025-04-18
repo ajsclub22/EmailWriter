@@ -40,5 +40,6 @@ An intelligent email writer built with **Spring Boot** and integrated with the *
 
 ```json
 {
-  "prompt": "Write a follow-up email after a job interview"
+    "emailContent":"i how are",
+    "tone":"professional"
 }
