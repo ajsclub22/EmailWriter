@@ -1,15 +1,15 @@
 # ✉️ AI-Powered Email Writer
 
-This is an intelligent email writer built with **Spring Boot** and integrated with **Gemini API** (Google's generative AI). It generates context-aware, professional email content based on user prompts.
+An intelligent email writer built with **Spring Boot** and integrated with the **Gemini API** (Google's generative AI). It generates context-aware, professional email content based on user prompts.
 
 ---
 
 ## 🚀 Features
 
 - Generate professional emails using AI
-- RESTful API built with Spring Boot
-- Easily customizable for different use cases
-- JSON-based input/output for easy integration
+- RESTful + Reactive API support
+- Easily customizable for different contexts
+- JSON-based input/output
 
 ---
 
@@ -17,14 +17,28 @@ This is an intelligent email writer built with **Spring Boot** and integrated wi
 
 - **Java 21**
 - **Spring Boot**
-- **Gemini API (Google Generative AI)**
-- **Maven/Gradle**
+- **Gemini API**
+- **Maven**
+- **Lombok**
 
 ---
 
-## 📦 How to Run
+## 📦 Dependencies
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+- `spring-boot-starter`
+- `spring-boot-starter-web`
+- `spring-boot-starter-webflux`
+- `lombok`
+
+> All dependencies are declared in the `pom.xml`.
+
+---
+
+## 🧪 Sample Request
+
+**POST** `/generate-email`
+
+```json
+{
+  "prompt": "Write a follow-up email after a job interview"
+}
