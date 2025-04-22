@@ -40,6 +40,14 @@ This tool is ideal for automating communication tasks in productivity apps, cust
 
 Before running the application, set your Gemini API configuration in `src/main/resources/application.properties`:
 
-```properties
+
 gemini.api.uri=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=
 gemini.api.key=YOUR_GEMINI_API_KEY
+
+---
+
+
+##  📬 API Usage
+**Endpoint**
+POST  `/api/mail/generate`
+
