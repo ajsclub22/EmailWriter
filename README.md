@@ -1,3 +1,39 @@
+# ✉️ AI-Powered Email Writer
+
+An intelligent, AI-based email response generator built using **Java (Spring Boot)** and powered by **Google's Gemini API**. This project provides a RESTful API that accepts user-provided email content and tone, and generates a professional, context-aware reply using generative AI. It's ideal for automating communication tasks in productivity apps, customer support, CRM tools, or any system that needs smart email handling.
+
+---
+
+## 🚀 Features
+
+- 🤖 Generates professional and context-sensitive email replies
+- 🗣️ Supports tone customization (e.g., formal, casual, friendly)
+- 🔄 Clean response — only the email body, no subject or extra info
+- ⚡ Built with reactive Spring WebFlux for non-blocking performance
+- 🌐 JSON-based REST API ready for integration
+- 🔧 Easy to extend with custom prompts, languages, or formatting
+
+---
+
+## 🛠 Tech Stack
+
+- **Java 21**
+- **Spring Boot**
+- **Spring WebFlux**
+- **Google Gemini API**
+- **Maven**
+- **Lombok**
+
+---
+
+## 📦 Dependencies
+lonmok
+spring web
+spring reactive web
+
+
+
+
 ⚙️ Configuration
 Before running the application, set your Gemini API configuration in src/main/resources/application.properties:
 
