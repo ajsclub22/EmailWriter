@@ -43,3 +43,19 @@ An intelligent email writer built with **Spring Boot** and integrated with the *
     "emailContent":"i how are",
     "tone":"professional"
 }
+
+
+🔄 Flow Overview:
+A request hits the EmailController endpoint.
+
+It receives an EmailBody object (which contains email data, like tone or maybe more context).
+
+This gets passed to the EmailGeneratorService.
+
+A prompt is built using that email data.
+
+The service sends this prompt in a JSON request to the Gemini API.
+
+Gemini responds with a generated email reply.
+
+The response is extracted and returned to the frontend.
