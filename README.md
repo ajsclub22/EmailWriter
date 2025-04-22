@@ -1,15 +1,16 @@
 # ✉️ AI-Powered Email Writer
 
-An intelligent email writer built with **Spring Boot** and integrated with the **Gemini API** (Google's generative AI). It generates context-aware, professional email content based on user prompts.
+An intelligent email writer built with **Spring Boot** and integrated with **Google's Gemini API**. It generates professional, context-aware email responses using natural language input.
 
 ---
 
 ## 🚀 Features
 
-- Generate professional emails using AI
-- RESTful + Reactive API support
-- Easily customizable for different contexts
-- JSON-based input/output
+- ✅ Generate AI-powered email replies
+- ⚡ RESTful + Reactive API
+- 🎯 JSON-based input and output
+- 🎨 Customizable tone and content
+- 🔒 Clean response (no subject, no extra text)
 
 ---
 
@@ -17,7 +18,8 @@ An intelligent email writer built with **Spring Boot** and integrated with the *
 
 - **Java 21**
 - **Spring Boot**
-- **Gemini API**
+- **Spring WebFlux**
+- **Gemini API (Google Generative AI)**
 - **Maven**
 - **Lombok**
 
@@ -25,37 +27,23 @@ An intelligent email writer built with **Spring Boot** and integrated with the *
 
 ## 📦 Dependencies
 
+Declared in `pom.xml`:
+
 - `spring-boot-starter`
 - `spring-boot-starter-web`
 - `spring-boot-starter-webflux`
 - `lombok`
 
-> All dependencies are declared in the `pom.xml`.
-
 ---
 
-## 🧪 Sample Request
+## 📨 API Endpoint
 
-**POST** `/generate-email`
+**POST** `/api/mail/generate`
+
+### 📥 Sample Request
 
 ```json
 {
-    "emailContent":"i how are",
-    "tone":"professional"
+  "content": "Hi, can we reschedule our meeting to tomorrow afternoon?",
+  "tone": "formal"
 }
-
-
-🔄 Flow Overview:
-A request hits the EmailController endpoint.
-
-It receives an EmailBody object (which contains email data, like tone or maybe more context).
-
-This gets passed to the EmailGeneratorService.
-
-A prompt is built using that email data.
-
-The service sends this prompt in a JSON request to the Gemini API.
-
-Gemini responds with a generated email reply.
-
-The response is extracted and returned to the frontend.
